@@ -1,8 +1,8 @@
-const router = require('express').Router();
-const { User } = require('../../models');
+    const router = require('express').Router();
+    const { User } = require('../../models');
 
-// get all users
-router.get('/', (req, res) => {
+    // get all users
+    router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
     })
@@ -112,4 +112,4 @@ router.get('/', (req, res) => {
         });
     });
 
-module.exports = router;
+    module.exports = router;
